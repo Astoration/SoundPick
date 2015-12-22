@@ -1,0 +1,269 @@
+//
+   Created by Astora on 2015-11-21.
+
+doctype html
+html
+   head
+      title="Sound Pick"
+      link(href='/stylesheets/common.css' type='text/css' rel='stylesheet')
+      link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+      link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+      link(href='/stylesheets/DataPage.css' type='text/css' rel='stylesheet')
+      script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+      meta(charset='utf-8')
+   body
+      div(id='pageHeader')
+         a(href='/')
+            img(src="/images/header_logo.png")
+         div(id='user_menu')
+            a(href="#")
+               div 마이페이지
+            a(href="#")
+               div 로그아웃
+      div(class='row')
+         div(id='TitleHeader' class='valign-wrapper col s12 m12 l12 grey lighten-1 grey-text text-darken-2 z-depth-1-half') 관리자 페이지 입니다.
+         div(id='ContentBody')
+            div(class='col s2 m2 l2 grey hoverable lighten-2' id='clearPadding')
+               ul(id='navi')
+                  li
+                     img(id='naviHeader' src='/images/footer_logo.png')
+                  li(class='bold')
+                     a(href='#' class='waves-effect waves-grey text-darken-2 grey-text valign-wrapper') 모든 데이터 보기
+                  li(class='bold')
+                     a(href='#' class='waves-effect waves-grey text-darken-2 grey-text valign-wrapper') 헤드폰
+                  li(class='bold')
+                     a(href='#' class='waves-effect waves-grey text-darken-2 grey-text valign-wrapper') 이어폰
+                  li(class='bold')
+                     a(href='#' class='waves-effect waves-grey text-darken-2 grey-text valign-wrapper') 회원 관리
+                  li(class='bold')
+                     a(href='#' class='waves-effect waves-grey text-darken-2 grey-text valign-wrapper') 요청 관리
+            div(class='col s10 m10 l10 grey lighten-4 z-depth-2' id='content')
+               ul(id='resultData')
+                  li(id='tableHeader')
+                     div(class='col s3 m3 l3 center-align') 이미지
+                     div(class='col s3 m3 l3 center-align') 모델명
+                     div(class='col s3 m3 l3 center-align') 브랜드
+                     div(class='col s3 m3 l3 center-align') 가격
+                  //li
+                  //   div(class='col s3 m3 l3 center-align list imgBanner')
+                  //      img(src='/DBImages/ASSF-480-0.jpg' width='100%')
+                  //   div(class='col s3 m3 l3 center-align list') ASSF-480
+                  //   div(class='col s3 m3 l3 center-align list') Audio Technica
+                  //   div(class='col s3 m3 l3 center-align list') 5,000,000
+                  script(src='/javascripts/insertData.js' type='text/javascript')
+               a(id='addModel' class="btn-floating btn-large waves-effect waves-light grey")
+                  i(class='material-icons') add
+      div(id='input_bg')
+      div(id='input_form')
+         a(href='#')
+            i(id='close' class='material-icons grey-text text-text-darken-2') close
+         div(class='row' id='input_formHeader')
+            div(class='col 12s 12l 12m' id='inputHeader') 상품 등록
+         dir(class='row')
+            div(class='col 12s 12l 12m' id='formsBox')
+               form(action='/models/uploadModel' method='post' enctype='multipart/form-data')
+                  div
+                     p 모델 타입
+                     p
+                        input(class='with-gap' name='ModelType' value='이어폰' type='radio' id='EarPhone' checked='checked')
+                        label(for='EarPhone' class='label') 이어폰
+                        input(class='with-gap' name='ModelType' value='헤드폰' type='radio' id='HeadPhone')
+                        label(for='HeadPhone' class='label') 헤드폰
+                  div
+                     p 브랜드
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='brand' type='text' id='Brand')
+                           label(for='Brand') 브랜드
+                  div
+                     p 모델명
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='modelName' type='text' id='ModelName')
+                           label(for='ModelName') 모델명
+                  div
+                     p 가격
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='pay' type='text' id='Pay')
+                           label(for='Pay') 가격
+                  div
+                     p 유닛명
+                     p
+                        div(class='input-field col s12')
+                           select(name='Unit')
+                              optgroup(label='이어폰')
+                                 option(value='unit1' selected) 유닛1
+                                 option(value='unit2') 유닛2
+                              optgroup(label='헤드폰')
+                                 option(value='unit3') 유닛3
+                                 option(value='unit4') 유닛4
+                           label 유닛명
+                           script $(document).ready(function(){$('select').material_select();});
+                  div
+                     p 디자인
+                     p
+                        div(class='input-field col s12')
+                           select(name='design')
+                              option(value='' disabled selected) 디자인을 선택하세요
+                              optgroup(label='이어폰')
+                                 option(value='오픈형') 오픈형
+                                 option(value='커널형') 커널형
+                                 option(value='행거형') 헹거형
+                                 option(value='넥밴드형') 넥밴드형
+                              optgroup(label='헤드폰')
+                                 option(value='온이어형') 온이어형
+                                 option(value='오버이어형') 오버이어형
+                                 option(value='클립형') 클립형
+                           label 디자인
+                           script $(document).ready(function(){$('select').material_select();});
+                  div
+                     p 소리
+                     p
+                        div(class='input-field col s12')
+                           select(name='sound')
+                              option(value='' disabled selected) 소리를 선택하세요
+                              optgroup(label='이어폰')
+                                 option(value='소리1') 소리1
+                                 option(value='소리2') 소리2
+                              optgroup(label='헤드폰')
+                                 option(value='소리3') 소리3
+                                 option(value='소리4') 소리4
+                           label 소리
+                           script $(document).ready(function(){$('select').material_select();});
+                  div
+                     p 리모콘
+                     p
+                        input(class='with-gap' name='Remocon' value='O' type='radio' id='true')
+                        label(for='true' id='remoconSupportTrue' class='label') O
+                        input(class='with-gap' name='Remocon' value='X' type='radio' id='false' checked='checked')
+                        label(for='false' id='remoconSupportFalse' class='label') X
+                     p(id='osSupports')
+                        input(type='checkbox' name='osSupport' value='Android' id='android')
+                        label(for='android' class='functionality') 안드로이드 전용
+                        input(type='checkbox' name='osSupport' value='iOS' id='iOS')
+                        label(for='iOS' class='functionality') iOS 전용
+                  div
+                     p 컬러
+                     p
+                        div(class='input-field col s12')
+                           select(multiple name='color')
+                              option(value='' disabled selected) 색상을 선택하세요
+                              option(value='레드') 레드
+                              option(value='블랙') 블랙
+                              option(value='베이지') 베이지
+                              option(value='화이트') 화이트
+                           label 색상
+                           script $(document).ready(function(){$('select').material_select();});
+                  div
+                     p 기능성
+                     p
+                        input(type='checkbox' id='bluetooth' name='functionality' value='블루투스')
+                        label(for='bluetooth' class='functionality') 블루투스
+                        input(type='checkbox' id='water' name='functionality' value='방수')
+                        label(for='water' class='functionality') 방수
+                        input(type='checkbox' id='Noise' name='functionality' value='소음방지')
+                        label(for='Noise' class='functionality') 소음방지
+                        input(type='checkbox' id='cable' name='functionality' value='케이블분리')
+                        label(for='cable' class='functionality') 케이블분리
+                  div
+                     p 저음
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='row' type='text' id='Row')
+                           label(for='Row') 저음
+                  div
+                     p 고음
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='high' type='text' id='High')
+                           label(for='High') 고음
+                  div
+                     p 공간감
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='space' type='text' id='Space')
+                           label(for='Space') 공간감
+                  div
+                     p 착용감
+                     p
+                        div(class='input-field')
+                           input(class='validate' required name='wear' type='text' id='Wear')
+                           label(for='Wear') 착용감
+                  div
+                     p 추천장르
+                     p
+                        input(type='checkbox' id='ballade' name='genre' value='발라드')
+                        label(for='ballade' class='functionality') 발라드
+                        input(type='checkbox' id='dance' name='genre' value='댄스')
+                        label(for='dance' class='functionality') 댄스
+                        input(type='checkbox' id='HipHop' name='genre' value='힙합')
+                        label(for='HipHop' class='functionality') 힙합
+                        input(type='checkbox' id='Rock' name='genre' value='락')
+                        label(for='Rock' class='functionality') 락
+                        input(type='checkbox' id='Electronic' name='genre' value='일렉트로닉')
+                        label(for='Electronic' class='functionality') 일렉트로닉
+                        input(type='checkbox' id='Classic' name='genre' value='클래식')
+                        label(for='Classic' class='functionality') 클래식
+                  div
+                     p 플러그
+                     p
+                        input(class='with-gap' type='radio' name='plug' id='curved' value='ㄱ자형' checked='checked')
+                        label(for='curved' class='label') ㄱ자형
+                        input(class='with-gap' type='radio' name='plug' value='ㅣ자형' id='non-curve')
+                        label(for='non-curve' class='label') ㅣ자형
+                  div
+                     p 상품 구성 항목
+                     p
+                        input(type='checkbox' id='Case' value='케이스' name='sets')
+                        label(for='Case' class='functionality') 케이스
+                        input(type='checkbox' id='additionCable' value='추가 케이블' name='sets')
+                        label(for='additionCable' class='functionality') 추가 케이블
+                        input(type='checkbox' id='earPad' name='sets' value='이어패드')
+                        label(for='earPad' class='functionality') 이어패드
+                        input(type='checkbox' id='earTip' name='sets' value='이어팁')
+                        label(for='earTip' class='functionality') 이어팁
+                  div
+                     p 최저가 URL(6샵)
+                     p
+                        div(class='input-field')
+                           input(class='validate' name='url' type='text' id='Url')
+                           label(for='Url') URL
+                  div
+                     p 제품 이미지(5개까지)
+                     p
+                        div(class='file-field input-field')
+                           div(class='btn grey lighten-1')
+                              span 이미지
+                              input(type='file' name='Image' multiple required)
+                           div(class='file-path-wrapper')
+                              input(class='file-path validate valid' type='text' placeholder='한개 또는 여러개의 이미지를 올려주세요')
+                  div
+                     p 메모
+                     div(class='input-field')
+                        textarea(id='memo' name='memo' required class='materialize-textarea')
+                        label(for='memo') 메모
+                  button(class='btn grey lighten-1 waves-effect waves-light' type='submit') 확인 <i class='material-icons right'>done</i>
+      div(id="footer")
+         img(id="footer_logo" src="/images/footer_logo.png")
+         div(id="footer_copyRight")
+            div(id="copyRightMenu")
+               div HOME
+               div 개인정보취급방침
+               div 이메일무단수집거부
+               div 이용약관
+               div 이메일문의
+            p 서울특별시 강남구 도곡로 63길 34길 (구. 강남구 대치동 924-1) / 고객상담센터 (02)552-1050, (02)552-1033 상호명 : SOUNDPICK
+            p 설립자 : 윤영주 COPYRIGHT(c) SM Academy. ALL RIGHT RESERVED
+         a(class='dropdown-button btn grey-text text-lighten-1 white right-align footerDrop' href='#' data-activates='dropdown1') 패밀리 사이트 ▼
+         ul(id='dropdown1' class='dropdown-content')
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 1
+            li(class="divider")
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 2
+            li(class="divider")
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 3
+      script(type="text/javascript" src="/javascripts/materialize.min.js")
+      script(type='text/javascript' src='/javascripts/DataPage.js')

@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: url(../font/NanumGothic-Regular.ttf);
+}
+body{
+    margin: 0 ;
+    padding: 15px 0;
+}
+#header{
+    height: 50px;
+    width: 100%;
+}
+#header a{
+    margin-left: 2%;
+    float: left;
+    display: inline-block;
+    height: 100%;
+}
+#login_button a{
+    margin-top:2px;
+    color: white;
+    position: relative;
+    right: 5px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-left: 4px;
+    font-size: 1.1em;
+    height: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 7px;
+    border-right: solid 1px white;
+}
+#content_box{
+    margin: auto;
+    margin-top: 120px;
+    width: 80%;
+}
+#content_copyRight{
+
+    font-size: 2.5em;
+    text-align: center;
+    margin: 25px auto;
+    font-weight: bold;
+    color: #484848;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+#content_box ul{
+    margin: auto;
+    display: block;
+width: 520px;
+    height: 100px;
+}
+#content_box ul li img{
+    height: 100%;
+}
+#content_box ul li{
+    margin-right: 30px;
+    display: inline;
+}
+#content_box ul li:last-child{
+    margin-right: 0;
+}
+#content_box #content_copy{
+color: #bcbcbc;
+    text-align: center;
+    display: block;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.3em;
+}
+#content_box a div{
+    margin: auto;
+    color: #535353;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 10px auto;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+#login_button a:last-child{
+    border-right: none;
+}
+#count_users{
+    width: 100%;
+    margin: auto;
+    border: solid 1px #e7e7e7;
+    padding: 20px 0;
+}
+#count_users p{
+    color: #484848;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 3.2em;
+    margin: 0 auto;
+    text-align: center;
+}
+#count_users p:last-child{
+    color: #242d5f;
+    font-weight: bold;
+    font-size: 5.0em;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.howToBox{
+    width: 33%;
+    display: inline-block;
+    margin: 30px 0;
+    border-right: 1px solid #e7e7e7;
+}
+.howToBox:last-child{
+    border-right: none;
+}
+.howToBox img{
+    display: inline-block;
+    margin: 5px 45%;
+}
+.howToBox p{
+    margin: 5px 0;
+}
+.stepNumber{
+    color: #dadada;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.stepTitle{
+    color: #161616;
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.stepHow{
+    color: #b0b0b0;
+    font-size: 1.6em;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+/*#header_logo{*/
+    /*height: 150px;*/
+/*}*/
+#login_button{
+    display: inline-block;
+    height: 1.1em;
+    vertical-align: middle;
+    margin-right: 5px;
+    float: right;
+    width: 155px;
+}
+#title_box{
+    width: 50%;
+    margin: auto;
+}
+#title_startBox{
+    border: solid 2px white;
+    font-size: 1.8em;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    background-color: rgba(0,0,0,0.1);
+    margin: 60px auto;
+    text-align: center;
+    width: 5.0em;
+    padding: 10px;
+}
+#title_box p{
+    margin: auto;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+    font-size: 1.8em;
+    margin-top: 10px;
+    color: white;
+    display: block;
+}
+body{
+    min-width: 1024px;
+    background: url(../images/index_background.png) no-repeat;
+    background-size: 100% 450px;
+}
+#footerInformation{
+    height: 150px;
+    width: 100%;
+}
+#footerInformation .informationBox{
+    width: 24.7%;
+    padding-top:45px;
+    height: 100%;
+    display: inline-block;
+    border : solid 1px #e7e7e7;
+}
+#footerInformation div:first-child{
+    border-left: none;
+}
+#footerInformation div:last-child{
+    border-right:none;
+}
+#footerInformation div div{
+    margin: auto;
+    width: 185px;
+    margin-bottom: 8px;
+    border: none;
+}
+#footerInformation div div img{
+    display: inline;
+    vertical-align: text-bottom;
+    margin-right: 2px;
+}
+#footerInformation div div p{
+    font-size: 25px;
+    margin:0;
+    display: inline;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #7c7c7c;
+}
+#footerInformation div p{
+    font-size: 1.2em;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: auto;
+    text-align: center;
+    color: #bcbcbc;
+}

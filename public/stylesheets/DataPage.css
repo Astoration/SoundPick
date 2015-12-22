@@ -1,0 +1,178 @@
+#TitleHeader{
+    height: 60px;
+    font-size: 1.5em;
+    position: relative;
+    z-index: 997;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-left: 40px;
+}
+.col ul li a{
+    width: 100%;
+    height: 44px;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-left: 20%;
+    line-height: 24px;
+}
+#navi ul li{
+    border-top: solid 1px #bdbdbd;
+}
+
+.col ul li:first-child{
+    border-top: none;
+}
+#naviHeader{
+    width: 55%;
+    margin: 10% 20%;
+    margin-right: 0;
+}
+#navi{
+    height: auto;
+}
+#input_form{
+    width: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 300%;
+    opacity: 1;
+    box-shadow: 10px 10px 10px gray;
+    z-index: 999;
+}
+#input_bg{
+    background: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 340%;
+    z-index: 998;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#input_formHeader{
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-left: 40px;
+}
+
+#close{
+    position: relative;
+    right: 20px;
+    top: 20px;
+    float: right;
+}
+#ContentBody{
+    height: 700px;
+}
+#content{
+    height: auto;
+    display: block;
+    height: 100%;
+    overflow: scroll;
+    z-index: 0;
+}
+#clearPadding{
+    position: relative;
+    padding: 0;
+    height: 100%;
+    z-index: 996;
+    box-shadow: 5px 5px 5px gray;
+}
+optgroup option{
+    color: #717171;
+}
+
+option:after{
+    border: #717171;
+}
+
+#addModel{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
+#inputHeader{
+    display: block;
+}
+#formsBox{
+    display: block;
+}
+.list{
+    padding-top:10px;
+    line-height: 100px;
+    padding-bottom:10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    border-bottom: solid 1px #717171;
+    height: 100px;
+}
+.imgBanner img{
+    margin-top: -30px;
+}
+.imgBanner{
+    overflow: hidden;
+}
+#tableHeader div{
+    padding-top:10px;
+    padding-bottom:10px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    border-bottom: solid 1px #717171;
+}
+[type="radio"].with-gap:checked + label:before {
+    border-radius: 50%;
+    border: 2px solid #717171; }
+
+[type="radio"].with-gap:checked + label:after {
+    border-radius: 50%;
+    border: 2px solid #717171;
+    background-color: #717171;
+    z-index: 0;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5); }
+/* label color */
+.input-field label {
+    color: #717171;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #717171;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #717171;
+    box-shadow: 0 1px 0 0 #717171;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #717171;
+    box-shadow: 0 1px 0 0 #717171;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #717171;
+    box-shadow: 0 1px 0 0 #717171;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #717171;
+}
+.label{
+    color: #717171;
+    margin-left: 50px;
+}
+form div p{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+.functionality{
+    margin-left: 40px;
+}

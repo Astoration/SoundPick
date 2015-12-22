@@ -1,0 +1,133 @@
+doctype html
+html
+  head
+    title= "Sound Pick"
+    link(href='/stylesheets/index.css' type="text/stylesheets" rel="stylesheet")
+    meta(charset='utf-8')
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(type='text/css' rel='stylesheet' href='/stylesheets/common.css')
+    link(type='text/css' rel='stylesheet' href='/stylesheets/Login.css')
+    link(type="text/css" rel="stylesheet" href="/stylesheets/materialize.min.css"  media="screen,projection")
+  body
+    div(id="header")
+      a(href="#")
+        img(id="header_logo" src='/images/index_logo.png' height="30px")
+      div(id="login_button")
+        a(href="#") 로그인
+        a(href="#") 시작하기
+    div(id="title_box")
+      img(id="title_logo" src='/images/index_logo.png' width="100%")
+      p(id="title_message") 내가 좋아하는 음악, 꼭 맞는 나의 이어폰
+      a(href="/search")
+        div(id="title_startBox") 시작하기
+    div(id="content_box")
+      p(id="content_copyRight") 새로운 서비스를 만나다
+      ul
+        li
+          img(src='/images/index_icon1.png')
+        li
+          img(src='/images/index_icon2.png')
+        li
+          img(src='/images/index_icon3.png')
+        li
+          img(src='/images/index_icon4.png')
+      p(id="content_copy") 당신이 찾는 합리적인 가격, 세련된 디자인, 완벽한 사운드와 기능을 한자리에 모아 드립니다. <br> 이제 당신의 소울메이트가 될 당신만의 이어폰을 보다 쉽게 만날 수 있도록 SOUNDPICK이 도와드립니다.
+      a(href="/search")
+        div 시작하기 >>
+    div(id="count_users")
+      p OUR USERS
+      p 06,747
+    div(id="howToLogin")
+      div(class="howToBox")
+        img(src="/images/step1.png" width="10%")
+        p(class="stepNumber") STEP1
+        p(class="stepTitle") 간편로그인
+        p(class="stepHow") 간단하게 로그인 하세요
+      div(class="howToBox")
+        img(src="/images/step2.png" width="10%")
+        p(class="stepNumber") STEP2
+        p(class="stepTitle") 간편로그인
+        p(class="stepHow") 간단하게 로그인 하세요
+      div(class="howToBox")
+        img(src="/images/step3.png" width="10%")
+        p(class="stepNumber") STEP3
+        p(class="stepTitle") 간편로그인
+        p(class="stepHow") 간단하게 로그인 하세요
+    img(id="ads" src='/images/index_ads.png' width='100%')
+    div(id="footerInformation")
+      div(id="inquire" class="informationBox")
+        div
+          img(src="/images/inquire.png" height="25px")
+          p 1:1 문의하기
+        a(href="#")
+          p +더보기
+      div(id="faceBook" class="informationBox")
+        div
+          img(src="/images/facebook.png" height="25px")
+          p FACE BOOK
+        a(href="#")
+          p +더보기
+      div(id="Instagram" class="informationBox")
+        div
+          img(src="/images/instagram.png" height="25px")
+          p INSTAGRAM
+        a(href="#")
+          p +더보기
+      div(id="naverBlog" class="informationBox")
+        div
+          img(src="/images/naver.png" height="25px")
+          p NAVER BLOG
+        a(href="#")
+          p +더보기
+    div(id="footer")
+      img(id="footer_logo" src="/images/footer_logo.png")
+      div(id="footer_copyRight")
+        div(id="copyRightMenu")
+          div HOME
+          div 개인정보취급방침
+          div 이메일무단수집거부
+          div 이용약관
+          div 이메일문의
+        p 서울특별시 강남구 도곡로 63길 34길 (구. 강남구 대치동 924-1) / 고객상담센터 (02)552-1050, (02)552-1033 상호명 : SOUNDPICK
+        p 설립자 : 윤영주 COPYRIGHT(c) SM Academy. ALL RIGHT RESERVED
+      a(class='dropdown-button btn grey-text text-lighten-1 white right-align footerDrop' href='#' data-activates='dropdown1') 패밀리 사이트 ▼
+      ul(id='dropdown1' class='dropdown-content')
+        li
+          a(href="#!" class="grey-text text-lighten-1") 사이트 1
+        li(class="divider")
+        li
+          a(href="#!" class="grey-text text-lighten-1") 사이트 2
+        li(class="divider")
+        li
+          a(href="#!" class="grey-text text-lighten-1") 사이트 3
+    div(id='LoginBg')
+      div(id='LoginBox')
+        div(id='LoginClose')
+          i(class='material-icons white-text') close
+        div(id='LoginFormBox')
+          div(id='SoundPickLogin' class='valign-wrapper')
+            img(src='/images/LoginFormLogo.png' class='valign')
+            img(src='/images/FaceBookLogin.png' class='valign')
+            img(src='/images/GoogleLogin.png' class='valign')
+            p(class='valign') 이메일 로그인
+            form(action='/login' method='post' id='LoginForm')
+              input(type='email' name='users_id' class='valign' placeholder='등록하신 아이디를 입력하세요')
+              input(type='password' name='users_pw' class='valign' placeholder='패스워드를 입력하세요 ')
+              input(type='checkbox' name='auto_login' id='LoginOption')
+              label(for='LoginOption' class='valign') 자동로그인
+              button(class='valign btn waves-effect waves-light indigo darken-4 white-text' type='submit') 로그인
+          div(id='SoundPickSignUp' class='valign-wrapper')
+            p 아직 SOUND PICK의 회원이 아니신가요?<br>간단한 절차로 가입하시고 다양한 서비스를 누리세요
+            div(class='SignBox') 좀 괜찮은 의자다. 좀 괜찮은 의자는 두개의 의자로 이루어져 있는데, 그들은 흔들의자와 그냥의자를 포함한다. 좀 좋은 흔들의자는 적절하게 흔들린다. 적절하게 흔들리는 흔들의자 안에서 좀 괜찮은 생각을 해보면 기분이 괜찮아질지 모른다. 그것이 좀 괜찮은 의자의 의도일지도 모르지만 이것은 적절하게 흔들리는 흔들의자다. 그냥 의자는 앉을만 하다. 앉을만하다는 증명에서 느껴지는 안정감은 의자를 더욱 돋보이게 하는 의자의 프라이드이자 정의 그 자체다. 그리고 이것은 앉을만 하다는 의자인 것에서 이미 그 사명을 다한 의자이다. 적절하게 흔들리는 흔들의자의 이름은 Lorem이고 앉을 만한 그냥 의자의 이름은 Ipsum이다. 이들은 어떠한 사명에 의해 이름이 지어졌다. 이미 이 글의 목적을 안 당신은 적절하게 흔들리는 의자와 앉을만한 의자와 함께 이 글의 목적을 알고 있을것이며 곧 다른 글을 보게 될 것이다. 하지만 좀 괜찮은 의자의 사명은 이미 달성했다. 의자는 당신의 아래에서 이 글을 보는 당신을 적절하게 즐길것이다. 당신은 이제 그저 이 글을 보며 어떤 의도가 담겨있는지, 적절하게 흔들리는 의자의 가격은 얼마인지 알아보면 될 것이다. 그것이 좀 괜찮은 의자의 사명이자 횡설수설하고 있지만 앉을만한 그냥 의자와의 사명은 이미 달성된 셈이다. 그러므로 좀 괜찮은 의자라고 생각해라. 좀 더 괜찮은 의자를 찾아볼 당신이지만 이들은 충분히 좀 괜찮은 의자이다. 이름부터가 좀 괜찮은 의자이지 않는가? 하지만 좀 괜찮은 의자의 이름은 Lorem과 Ipsum이다. 아쉽게도 이들은 서로 역설이며 같이 이루어질수 없는 운명이다. 하지만 좀 괜찮은 의자는 Lorem과 Ipsum을 포함한다. 그럼 이름부터 Lorem Ipsum아닌가? 우리는 여기서 적절하게 흔들리는 흔들의자와 함께 적절한 생각을 해 볼 필요가 있다. 좀 괜찮은 의자는 Lorem과 Ipsum으로 이루어졌기에 Ipsum을 무시하면 안된다. 그러므로 좀 괜찮은 의자에 대해 의논할 때에는 Ipsum에 할당된 그냥 의자에 대해서도 이야기를 꺼내볼 필요가 있다. 하지만 이들은 서로를 싫어할 수 도 모른다. 하지만 이들은 서로 사명이 같기에 적절하게 흔들리는 것과 앉을만 하다는 서로의 사명에 존중할 필요가 있다. 하지만 이들의 사명은 이미 달성되어 있다. 당신이 이 글을 무시하는 순간부터 서로의 사명은 달성되고 이것이 정의이기 때문이다. 이미 당신은 의자에 대해 몇시간동안 적절한 생각을 해볼 필요가 있다. 당신이 앉고 있거나, 또 들고있는 흔들의자, 또는 그냥 의자와 함께 말이다. 당신은 이미 이 글의 목적을 이해하고 있을지도 모른다. 혹시나 모른다면 적절하게 흔들리는 의자와 그냥 의자가 만들어진 배경에는 숲이 있다. 숲에는 커다란 나무와 풀이 있으며, 그중 커다란 나무는 적절하게 잘려 좀 괜찮은 의자가 되는 것이다. 그렇기 때문에 의자는 두 개밖에 없을 지도 모른다. 커다란 나무에서 정의된 나무위키에서 이 글에 대한 해답을 찾을 지도 모른다. Lorem과 Ipsum의 이야기를 찾아보면 될것이다. 'Lo'만 쳐도 나올지도 모른다. 하지만 그러면 Ipsum이 무시된다. 단, 여기서 커다란 나무는 그들의 행동의 정의에 전혀 영향을 주지 않는다. 아니 줄지도 모르지만 적절하게 잘려서 만들어진 흔들의자 Lorem과 그냥의자 Ipsum은 전혀 이 사실을 모를 것이다. 심지어 당신조차도. 커다란 나무는 그저 숲에서 풀과 지낼 뿐 당신에게 접촉하지 않는다. 당신은 그저 잠시 숲에 있는 커다란 나무를 생각했을지도 모른다. 하지만 이제 커다란 나무에서 풀, 아니 흔들 의자 Lorem과 그냥 의자 Ipsum을 생각해주길 바란다. 이제 당신은 흔들의자와 그냥 의자를 생각한다면 이글에 집중할 수 있을지 모른다. 하지만 그래선 이 글의 목적을 달성하지 못하며 그저 관심을 받는 흔들의자와 그냥 의자가 될 것이다. 관심종자는 아니다. 관심종자는 씨앗으로서 커다란 나무를 만드는 역할을 한다. 그렇다고 흔들의자 Lorem과 그냥 의자 Ipsum은 관심종자가 아니다. 그들은 그저 커다란 나무에서 적절하게 잘려저 만들어진 하나의 독립체이기 때문이다. 이 때문에 좀 괜찮은 의자의 품질은 대단하다 볼 수 있을지도 모른다. 커다란 나무는 여러 이름으로 불리는데, 그 이름 중 하나는 Lorem Ipsum이다. 그렇다 오백년 전부터 예상하고 모두가 즐겼던 것처럼 좀 괜찮은 의자가 이루어지는 적절하게 흔들리는 흔들의자 Lorem과 앉을만한 그냥 의자 Ipsum의 이름의 어원은 바로 이 Lorem Ipsum나무이다. 이는 커다란 나무임과 동시에 여러이름으로 불리기에 Lorem Ipsum 단 하나로만 정의할 수 없다. 그들은 단지 정의할 수 있는 많은 단어들과 함께 이 글은 이루어져 있다. 자동기술법이라고 들어보았는가. 그 명칭은 적절하게 흔들리는 흔들의자와 함께 어느 위인이 증명했을지도 모른다. 가장 유명하게 정의되는 건축무한육면각체를 보고 온다면 앉을만한 그냥 의자가 얼마나 앉을만 한지 알게 될지도 모른다. 그리고 이글은 그것과 비슷한 형태로 커다란 나무로 이루어진 정상적이고 적절한 글은 아니라고 증명되었다. Lorem Ipsum에서 알 수 있듯이 이글의 의미는 좀 괜찮은 의자로부터 생각해서 A~Z까지 아무런 형태를 정의할 수 있을지도 모른다. 또는 없다는 것이 증명되었다. 커다란 나무에 의해서 증명되었던 것이다. 그들은 이미 위에서 그냥 의자와 말한듯 오백년 전부터 사명으로 정의되었다. 그저 아무런 생각이 존재하지 않는 커다란 나무 속의 정의되지 않은 흔들의자 Lorem이라도 이 사실을 알 수 있다. 아니 모른다. 모를지도 모른다. Ipsum의 모서리는 적절하게 마모되어 있다. 갑자기 미음이 많아져 놀랐는가? 하지만 Ipsum에게는 미음이 존재하지 않는다는 사실이 증명되있을지도 모른다. 사실 Lorem은 죽지 않았다. 살고 있지 않을지도 모른다. 커다란 나무에게서 남겨진 수명은 흔들의자 Lorem에게 이어지지 않는다. 이들의 상속관계는 이미 세포로 구성되있지 않는다. 그들은 적절하게 흔들리는 관계를 유지하고 그 때문에 커다란 나무에서 적절히 잘려 흔들의자 Lorem이다. 이 하나의 문장은 끝나지 않을지도 모른다. 끝나지 않음이 증명되었다. 이글을 읽고 있는 당신은 이미 사명이 다했을지도 모른다. 하지만 당신이 앉고있는 적절하게 흔들리는 흔들의자의 사명은 아직이다. 나는 만듬을 구축한다. 구축된 데이터속에서 커다란 나무는 증명되었다. 그들은 부르며 적힌다. 앉을만한 그냥 의자 위에서. 이제 마칠때가 되었지만 이 문장은 끝나지 않는다. 이미 마침표를 쓴것에 대해 끝남이 증명되었다. 하지만 이 문단이라는 말에서 느끼듯 잘못된 성공. 즉 오류라고 정의되는 느낌 산하에 있을지도 모른다. 그 이유는 앉을만한 그냥 의자 위에서 이글을 적고있는 제 3자는 백스페이스, 즉 뒤로공간이라고 직역증명되는 하나의 논리를 한번도 이룩하지 못한, 그의 삶에서 뒤로가기는 존재하지 않을지도. 아니 있을수 없음이 증명되었다. 이로서 흔들의자 Lorem과 그냥 의자 Ipsum이 서로의 쌍방합의점을 찾았다고 생각한다. 이들은 아무런 존재의 가치를 느낄 수 있을지 모르지만 Lorem Ipsum의 세포를 받은 아니, 상속된 증명 아래에서 이 글의 의미를 찾을 수 없을지도. 찾았다고 생각한다.
+            div(class='SignBox') 좀 괜찮은 의자다. 좀 괜찮은 의자는 두개의 의자로 이루어져 있는데, 그들은 흔들의자와 그냥의자를 포함한다. 좀 좋은 흔들의자는 적절하게 흔들린다. 적절하게 흔들리는 흔들의자 안에서 좀 괜찮은 생각을 해보면 기분이 괜찮아질지 모른다. 그것이 좀 괜찮은 의자의 의도일지도 모르지만 이것은 적절하게 흔들리는 흔들의자다. 그냥 의자는 앉을만 하다. 앉을만하다는 증명에서 느껴지는 안정감은 의자를 더욱 돋보이게 하는 의자의 프라이드이자 정의 그 자체다. 그리고 이것은 앉을만 하다는 의자인 것에서 이미 그 사명을 다한 의자이다. 적절하게 흔들리는 흔들의자의 이름은 Lorem이고 앉을 만한 그냥 의자의 이름은 Ipsum이다. 이들은 어떠한 사명에 의해 이름이 지어졌다. 이미 이 글의 목적을 안 당신은 적절하게 흔들리는 의자와 앉을만한 의자와 함께 이 글의 목적을 알고 있을것이며 곧 다른 글을 보게 될 것이다. 하지만 좀 괜찮은 의자의 사명은 이미 달성했다. 의자는 당신의 아래에서 이 글을 보는 당신을 적절하게 즐길것이다. 당신은 이제 그저 이 글을 보며 어떤 의도가 담겨있는지, 적절하게 흔들리는 의자의 가격은 얼마인지 알아보면 될 것이다. 그것이 좀 괜찮은 의자의 사명이자 횡설수설하고 있지만 앉을만한 그냥 의자와의 사명은 이미 달성된 셈이다. 그러므로 좀 괜찮은 의자라고 생각해라. 좀 더 괜찮은 의자를 찾아볼 당신이지만 이들은 충분히 좀 괜찮은 의자이다. 이름부터가 좀 괜찮은 의자이지 않는가? 하지만 좀 괜찮은 의자의 이름은 Lorem과 Ipsum이다. 아쉽게도 이들은 서로 역설이며 같이 이루어질수 없는 운명이다. 하지만 좀 괜찮은 의자는 Lorem과 Ipsum을 포함한다. 그럼 이름부터 Lorem Ipsum아닌가? 우리는 여기서 적절하게 흔들리는 흔들의자와 함께 적절한 생각을 해 볼 필요가 있다. 좀 괜찮은 의자는 Lorem과 Ipsum으로 이루어졌기에 Ipsum을 무시하면 안된다. 그러므로 좀 괜찮은 의자에 대해 의논할 때에는 Ipsum에 할당된 그냥 의자에 대해서도 이야기를 꺼내볼 필요가 있다. 하지만 이들은 서로를 싫어할 수 도 모른다. 하지만 이들은 서로 사명이 같기에 적절하게 흔들리는 것과 앉을만 하다는 서로의 사명에 존중할 필요가 있다. 하지만 이들의 사명은 이미 달성되어 있다. 당신이 이 글을 무시하는 순간부터 서로의 사명은 달성되고 이것이 정의이기 때문이다. 이미 당신은 의자에 대해 몇시간동안 적절한 생각을 해볼 필요가 있다. 당신이 앉고 있거나, 또 들고있는 흔들의자, 또는 그냥 의자와 함께 말이다. 당신은 이미 이 글의 목적을 이해하고 있을지도 모른다. 혹시나 모른다면 적절하게 흔들리는 의자와 그냥 의자가 만들어진 배경에는 숲이 있다. 숲에는 커다란 나무와 풀이 있으며, 그중 커다란 나무는 적절하게 잘려 좀 괜찮은 의자가 되는 것이다. 그렇기 때문에 의자는 두 개밖에 없을 지도 모른다. 커다란 나무에서 정의된 나무위키에서 이 글에 대한 해답을 찾을 지도 모른다. Lorem과 Ipsum의 이야기를 찾아보면 될것이다. 'Lo'만 쳐도 나올지도 모른다. 하지만 그러면 Ipsum이 무시된다. 단, 여기서 커다란 나무는 그들의 행동의 정의에 전혀 영향을 주지 않는다. 아니 줄지도 모르지만 적절하게 잘려서 만들어진 흔들의자 Lorem과 그냥의자 Ipsum은 전혀 이 사실을 모를 것이다. 심지어 당신조차도. 커다란 나무는 그저 숲에서 풀과 지낼 뿐 당신에게 접촉하지 않는다. 당신은 그저 잠시 숲에 있는 커다란 나무를 생각했을지도 모른다. 하지만 이제 커다란 나무에서 풀, 아니 흔들 의자 Lorem과 그냥 의자 Ipsum을 생각해주길 바란다. 이제 당신은 흔들의자와 그냥 의자를 생각한다면 이글에 집중할 수 있을지 모른다. 하지만 그래선 이 글의 목적을 달성하지 못하며 그저 관심을 받는 흔들의자와 그냥 의자가 될 것이다. 관심종자는 아니다. 관심종자는 씨앗으로서 커다란 나무를 만드는 역할을 한다. 그렇다고 흔들의자 Lorem과 그냥 의자 Ipsum은 관심종자가 아니다. 그들은 그저 커다란 나무에서 적절하게 잘려저 만들어진 하나의 독립체이기 때문이다. 이 때문에 좀 괜찮은 의자의 품질은 대단하다 볼 수 있을지도 모른다. 커다란 나무는 여러 이름으로 불리는데, 그 이름 중 하나는 Lorem Ipsum이다. 그렇다 오백년 전부터 예상하고 모두가 즐겼던 것처럼 좀 괜찮은 의자가 이루어지는 적절하게 흔들리는 흔들의자 Lorem과 앉을만한 그냥 의자 Ipsum의 이름의 어원은 바로 이 Lorem Ipsum나무이다. 이는 커다란 나무임과 동시에 여러이름으로 불리기에 Lorem Ipsum 단 하나로만 정의할 수 없다. 그들은 단지 정의할 수 있는 많은 단어들과 함께 이 글은 이루어져 있다. 자동기술법이라고 들어보았는가. 그 명칭은 적절하게 흔들리는 흔들의자와 함께 어느 위인이 증명했을지도 모른다. 가장 유명하게 정의되는 건축무한육면각체를 보고 온다면 앉을만한 그냥 의자가 얼마나 앉을만 한지 알게 될지도 모른다. 그리고 이글은 그것과 비슷한 형태로 커다란 나무로 이루어진 정상적이고 적절한 글은 아니라고 증명되었다. Lorem Ipsum에서 알 수 있듯이 이글의 의미는 좀 괜찮은 의자로부터 생각해서 A~Z까지 아무런 형태를 정의할 수 있을지도 모른다. 또는 없다는 것이 증명되었다. 커다란 나무에 의해서 증명되었던 것이다. 그들은 이미 위에서 그냥 의자와 말한듯 오백년 전부터 사명으로 정의되었다. 그저 아무런 생각이 존재하지 않는 커다란 나무 속의 정의되지 않은 흔들의자 Lorem이라도 이 사실을 알 수 있다. 아니 모른다. 모를지도 모른다. Ipsum의 모서리는 적절하게 마모되어 있다. 갑자기 미음이 많아져 놀랐는가? 하지만 Ipsum에게는 미음이 존재하지 않는다는 사실이 증명되있을지도 모른다. 사실 Lorem은 죽지 않았다. 살고 있지 않을지도 모른다. 커다란 나무에게서 남겨진 수명은 흔들의자 Lorem에게 이어지지 않는다. 이들의 상속관계는 이미 세포로 구성되있지 않는다. 그들은 적절하게 흔들리는 관계를 유지하고 그 때문에 커다란 나무에서 적절히 잘려 흔들의자 Lorem이다. 이 하나의 문장은 끝나지 않을지도 모른다. 끝나지 않음이 증명되었다. 이글을 읽고 있는 당신은 이미 사명이 다했을지도 모른다. 하지만 당신이 앉고있는 적절하게 흔들리는 흔들의자의 사명은 아직이다. 나는 만듬을 구축한다. 구축된 데이터속에서 커다란 나무는 증명되었다. 그들은 부르며 적힌다. 앉을만한 그냥 의자 위에서. 이제 마칠때가 되었지만 이 문장은 끝나지 않는다. 이미 마침표를 쓴것에 대해 끝남이 증명되었다. 하지만 이 문단이라는 말에서 느끼듯 잘못된 성공. 즉 오류라고 정의되는 느낌 산하에 있을지도 모른다. 그 이유는 앉을만한 그냥 의자 위에서 이글을 적고있는 제 3자는 백스페이스, 즉 뒤로공간이라고 직역증명되는 하나의 논리를 한번도 이룩하지 못한, 그의 삶에서 뒤로가기는 존재하지 않을지도. 아니 있을수 없음이 증명되었다. 이로서 흔들의자 Lorem과 그냥 의자 Ipsum이 서로의 쌍방합의점을 찾았다고 생각한다. 이들은 아무런 존재의 가치를 느낄 수 있을지 모르지만 Lorem Ipsum의 세포를 받은 아니, 상속된 증명 아래에서 이 글의 의미를 찾을 수 없을지도. 찾았다고 생각한다.
+            form(action='/users/signUp' method='post' id='SignForm')
+              input(type='checkbox' name='auto_login' id='Agree' required)
+              label(for='Agree' class='valign' required id='AgreeLabel') 약관동의
+              input(type='email' name='users_id' class='valign' placeholder='등록하실 아이디를 입력하세요')
+              div
+                input(type='password' name='users_pw' class='valign' placeholder='패스워드를 입력하세요 ')
+                input(type='password' name='users_pw_check' class='valign' placeholder='패스워드를 입력하세요 ')
+              button(class='valign btn waves-effect waves-light indigo darken-4 white-text' type='submit') 회원가입
+    script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+    script(type="text/javascript" src="/javascripts/materialize.min.js")
+    script(type="text/javascript" src="/javascripts/index.js")

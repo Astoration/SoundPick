@@ -1,0 +1,154 @@
+//
+   Created by Astora on 2015-11-12.
+doctype html
+html
+   head
+      title="Sound Pick"
+      link(href='/stylesheets/searchFin.css' type='text/css' rel='stylesheet')
+      link(href='/stylesheets/common.css' type='text/css' rel='stylesheet')
+      script(type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js")
+      link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+      link(href='/stylesheets/materialize.min.css' media='screen,projection' type='text/css' rel='stylesheet')
+      meta(charset='utf-8')
+   body
+      div(id='pageHeader')
+          a(href='/')
+            img(src="/images/header_logo.png")
+         div(id='user_menu')
+            a(href="#")
+               div 마이페이지
+            a(href="#")
+               div 로그아웃
+      div(id='searchForm')
+         form(method='get' action='/search' id='SearchFormTag')
+            div(id='searchFormHeader')
+               ul
+                  li 검색하기
+                  li 각 카테고리별 해당 항목을 선택해 주시면, 제품이 추천됩니다
+            div(class='FormCatecory')
+               div(class='CatecoryInformation') 디자인
+                  img(src='/images/toolTip.png' height='18px' class='tooltipped' data-position='right' data-delay='50' data-tooltip='디자인을 선택합니다')
+               div(class='CatecoryContent')
+                  span(id='DesignOpen' class='searchOptionForm') 오픈형
+                  input(type='hidden' name='designOpen' value='false')
+                  span(id='DesignKernel' class='searchOptionForm') 커널형
+                  input(type='hidden' name='designKernel' value='false')
+                  span(id='DesignHanger' class='searchOptionForm') 행거형
+                  input(type='hidden' name='designHanger' value='false')
+            div(class='FormCatecory')
+               div(class='CatecoryInformation') 음악취향
+               div(class='CatecoryContent')
+                  span(id='MusicBallad' class='searchOptionForm') 발라드
+                  input(type='hidden' name='musicBallad' value='false')
+                  span(id='MusicHiphop' class='searchOptionForm') 힙합
+                  input(type='hidden' name='musicHiphop' value='false')
+                  span(id='MusicElectronic' class='searchOptionForm') 일렉트로닉
+                  input(type='hidden' name='musicElectronic' value='false')
+                  span(id='MusicClassic' class='searchOptionForm') 클래식
+                  input(type='hidden' name='musicClassic' value='false')
+                  span(id='MusicDance' class='searchOptionForm') 댄스
+                  input(type='hidden' name='musicDance' value='false')
+                  span(id='MusicRock' class='searchOptionForm') 락
+                  input(type='hidden' name='musicRock' value='false')
+            div(class='FormCatecory')
+               div(class='CatecoryInformation') 기능성
+                  img(src='/images/toolTip.png' height='18px' class='tooltipped' data-position='right' data-delay='50' data-tooltip='기능성을 선택합니다')
+               div(class='CatecoryContent')
+                  span(id='FuncMic' class='searchOptionForm') [일반]마이크/컨트롤러
+                  input(type='hidden' name='funcMic' value='false')
+                  span(id='FuncBlueTooth' class='searchOptionForm') [일반]블루투스
+                  input(type='hidden' name='funcBlueTooth' value='false')
+                  span(id='FuncWaterproof' class='searchOptionForm') [특수]생활방수
+                  input(type='hidden' name='funcWaterproof' value='false')
+                  span(id='FuncNoise' class='searchOptionForm') [특수]소음방지
+                  input(type='hidden' name='funcNoise' value='false')
+                  span(id='FuncCable' class='searchOptionForm') [특수]케이블 분리
+                  input(type='hidden' name='funcCable' value='false')
+            script(type='text/javascript' src='/javascripts/SearchForm.js')
+            div(id='searchInputForm')
+               input(type='text' name='searchByKeyword' placeholder='검색할 키워드를 입력하세요' style='width:80%;border-bottom:none;')
+               div(id='submitBtn')
+                  i(class='material-icons') search
+      div(id="search_content")
+         div(id='searchResult')
+            img(src='/images/compare.png')
+            span 검색결과
+            span 총 <span>124개</span>의 상품
+            div(id='select_pay')
+               a(class='dropdown-button btn grey-text text-lighten-1 white right-align' href='#' style='box-shadow:none; padding:0 5px; border: 1px solid #c9c9c9' data-activates='dropdown2') <span>가격선택</span> <span>▼</span>
+               ul(id='dropdown2' class='dropdown-content')
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 10만원
+                  li(class="divider")
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 50만원
+                  li(class="divider")
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 100만원
+               span ~
+               a(class='dropdown-button btn grey-text text-lighten-1 white right-align' href='#' style='box-shadow:none; padding:0 5px; border: 1px solid #c9c9c9' data-activates='dropdown3') <span>가격선택</span> <span>▼</span>
+               ul(id='dropdown3' class='dropdown-content')
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 10만원
+                  li(class="divider")
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 50만원
+                  li(class="divider")
+                  li
+                     a(href="#!" class="grey-text text-lighten-1") 100만원
+         div(id='compareBox') <span>비교하기</span> <span>검색된 제품중 비교하고 싶은 제품을 체크하시고 확인하시면 제품별 비교를 해 볼 수 있습니다<span>
+            div(id='compareBtn')
+               i(class='material-icons') done
+         ul(class='collapsible' data-collapsible='accordion' style='box-shadow:none; border:none;')
+            li
+               div(class='collapsible-header active') 보급형
+                  img(src="/images/IC_menu_select.png" class='select_button')
+               div(class='collapsible-body' id='firstSearchContent')
+                  div
+                     a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 1만원대
+                     a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 2만원대
+                     a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 3만원대
+                  script(type='text/javascript' src='/javascripts/SearchInsert.js')
+            li
+               div(class='collapsible-header') 입문용
+                  img(src="/images/IC_menu_select.png" class='select_button')
+               div(class='collapsible-body')
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 1만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 2만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 3만원대
+            li
+               div(class='collapsible-header') 보급형
+                  img(src="/images/IC_menu_select.png" class='select_button')
+               div(class='collapsible-body')
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 1만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 2만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 3만원대
+            li
+               div(class='collapsible-header') 전문가형
+                  img(src="/images/IC_menu_select.png" class='select_button')
+               div(class='collapsible-body')
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 1만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 2만원대
+                  a(class="waves-effect waves-light btn toggleBtn teal lighten-3" style='box-shadow:none;border-radius:50px;padding:0;width:100px;height:30px;line-height:30px;') 3만원대
+      div(id="footer")
+         img(id="footer_logo" src="/images/footer_logo.png")
+         div(id="footer_copyRight")
+            div(id="copyRightMenu")
+               div HOME
+               div 개인정보취급방침
+               div 이메일무단수집거부
+               div 이용약관
+               div 이메일문의
+            p 서울특별시 강남구 도곡로 63길 34길 (구. 강남구 대치동 924-1) / 고객상담센터 (02)552-1050, (02)552-1033 상호명 : SOUNDPICK
+            p 설립자 : 윤영주 COPYRIGHT(c) SM Academy. ALL RIGHT RESERVED
+         a(class='dropdown-button btn grey-text text-lighten-1 white right-align footerDrop' href='#' data-activates='dropdown1') 패밀리 사이트 ▼
+         ul(id='dropdown1' class='dropdown-content')
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 1
+            li(class="divider")
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 2
+            li(class="divider")
+            li
+               a(href="#!" class="grey-text text-lighten-1") 사이트 3
+      script(type="text/javascript" src="/javascripts/materialize.min.js")

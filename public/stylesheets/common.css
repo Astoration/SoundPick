@@ -1,0 +1,73 @@
+#footer #footer_copyRight #copyRightMenu div{
+    display: inline-block;
+    border-right: 1px solid #b9b9b9;
+    padding: 0 5px;
+}
+@font-face {
+    src: url(../font/NanumGothic-Regular.ttf);
+    font-family: 'Nanum Gothic';
+}
+body{
+    min-width: 1024px;
+}
+#footer #footer_copyRight #copyRightMenu div:last-child{
+    border-right: none;
+}
+#footer{
+    color: #b9b9b9;
+    background: #f9f9f9;
+    height: 100px;
+    margin: 0;
+    width: 100%;
+}
+#footer_logo{
+    margin-left: 20px;
+    position: relative;
+    top: -20px;
+    display: inline-block;
+}
+#footer_copyRight{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    width: 60%;
+}
+#footer_copyRight p{
+    display: inline-block;
+    margin : 0;
+}
+.footerDrop{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+#user_menu{
+    display: inline-block;
+    float: right;
+    margin: 20px 30px;
+}
+#pageHeader{
+    border-bottom: solid 1px #bcbcbc;
+}
+#pageHeader img{
+    display: inline-block;
+    margin: 10px 40px;
+}
+a{
+    text-decoration: none;
+}
+#user_menu a div{
+    border-right: solid 1px #343434;
+    color: #343434;
+    font-family: 'Nanum Gothic', sans-serif;
+    display: inline-block;
+    padding: 0 5px;
+}
+#user_menu a:last-child div{
+    border-right: none;
+}
+body{
+    margin: 0 ;
+    padding: 15px 0;
+}

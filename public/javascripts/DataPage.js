@@ -1,0 +1,22 @@
+/**
+ * Created by Astora on 2015-11-22.
+ */
+$(document).ready(function(){
+    $("#input_bg").hide();
+    $("#input_form").hide();
+    $("#close").click(function(){
+        $("#input_bg").hide();
+        $("#input_form").hide();
+    });
+    $("#addModel").click(function(){
+        $("#input_bg").show();
+        $("#input_form").show();
+    });
+    $('#osSupports').hide();
+    $('#remoconSupportFalse').click(function(){
+        $('#osSupports').slideUp("slow");
+    });
+    $('#remoconSupportTrue').click(function(){
+        $('#osSupports').slideDown("slow");
+    });
+});
