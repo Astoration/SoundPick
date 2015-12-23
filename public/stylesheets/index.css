@@ -19,12 +19,13 @@ body{
 #login_button a{
     margin-top:2px;
     color: white;
-    position: relative;
+    display: inline;
     right: 5px;
     font-family: 'Nanum Gothic', sans-serif;
     padding-left: 4px;
-    font-size: 1.1em;
-    height: 1.1em;
+    font-size: 1vw;
+    height: 1vw;
+    float: right;
     text-decoration: none;
     display: inline-block;
     padding-right: 7px;
@@ -79,7 +80,7 @@ color: #bcbcbc;
     font-family: 'Nanum Gothic', sans-serif;
 
 }
-#login_button a:last-child{
+#login_button a:first-child{
     border-right: none;
 }
 #count_users{
@@ -145,12 +146,11 @@ a{
     /*height: 150px;*/
 /*}*/
 #login_button{
-    display: inline-block;
-    height: 1.1em;
+    display: inline;
     vertical-align: middle;
     margin-right: 5px;
     float: right;
-    width: 155px;
+    position: relative;
 }
 #title_box{
     width: 50%;

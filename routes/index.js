@@ -9,8 +9,5 @@ router.get('/', function(req, res, next) {
 router.get('/search',function(req,res,next){
     res.render('searchFin');
 });
-router.get('/DataPage',function(req,res,next){
-   res.render('DataPage');
-});
 
 module.exports = router;
