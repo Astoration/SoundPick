@@ -10,4 +10,8 @@ router.get('/search',function(req,res,next){
     res.render('searchFin');
 });
 
+router.get('/DataPage',function(req,res){
+	res.render('DataPage');
+	});
+
 module.exports = router;
